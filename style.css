@@ -448,7 +448,7 @@ header{
     }
    
 }
-@media(max-width: 480px){
+@media(max-width: 411px){
   header{
     flex-direction: column;
     height: auto;
