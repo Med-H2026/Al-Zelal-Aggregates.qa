@@ -440,8 +440,13 @@ header{
         padding: 30px 25px;
         max-width: 60%;
     }
-    .card-style h1 { font-size: 28px; }
-    .specs-list li { font-size: 14px; }
+    .card-style h1 { 
+      font-size: 28px; 
+    }
+    .specs-list li { 
+      font-size: 14px; 
+    }
+   
 }
 @media(max-width: 480px){
   header{
@@ -451,5 +456,102 @@ header{
   .nav-list{
     justify-content: center;
     flex-wrap: wrap;
+    font-size: 1em;
+  }
+  .hero-slider .swiper{
+    width: 94%;
+    margin-left: 5px;
+  }
+  .home{
+    width: 95%;
+  }
+  .badge{
+    font-size: 0.8em;
+  }
+  .card-style{
+    height: 420px;
+  }
+  .card-style ul li{
+    margin-bottom: -2px;
+  }
+  .card-style h1{
+    font-size: 1.2em;
+    margin-bottom: -8px;
+  }
+  .btn-primary{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    font-size: 0.8em;
+    width: 120px;
+    height: 50px;
+    padding: 10px;
+    margin: 5px -5px;
+  }
+  .about{
+    width: 285px;
+  }
+  .about h1{
+    font-size: 2em;
+    margin-bottom: -10px;
+    margin-top: -20px;
+  }
+   .about-parag{
+    width: 230px;
+    margin-left: -20px;
+  }
+  .about-parag p{
+    font-size: 1em;
+  }
+  .vision-mission-grid{
+    width: 230px;
+    margin-left: -20px;
+    padding: 15px;
+}
+  .about-card{
+    padding: 15px;
+    margin: 25px 10px;
+    transition: all 0.7s ease;
+    
+    
+  }
+  .about-card:hover{
+    padding: 15px;
+    margin: 25px 10px;
+  }
+  .our-mission {
+    height: 470px;
+  }
+  .our-vision{
+    height: 150px;
+  }
+  .about-card p{
+    font-size: 0.9em;
+  }
+  
+  .values-grid{
+    width: 230px;
+    margin-left: -20px;
+    padding: 15px;
+  }
+  .value-parag{
+    font-size: 1em;
+  }
+  .value-card{
+    min-height: 130px;
+    margin: 10px 5px;
+  }
+  .value-card a{
+    font-size: 1.5em;
+  }
+  .value-card-info{
+    padding-right: 5px;
+  }
+  .value-card-info h3{
+    font-size: 1em;
+  }
+  .value-card-info p{
+    font-size: 0.7em;
   }
 }
