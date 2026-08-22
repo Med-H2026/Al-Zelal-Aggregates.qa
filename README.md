@@ -1,33 +1,20 @@
-# AlZelalAggregates.qa
+# AlZelal Aggregates - Corporate Website
 
-**Qatar's Premium Supplier of Gabbro, Limestone & Recycled Aggregates**
-
-A fast, responsive B2B website built for Al Zelal Aggregates. Showcasing QCS 2014 compliant materials to contractors, engineers, and project managers in Qatar.
-
-### 🌐 Live Demo
-[alzelalaggregates.qa] ← add your domain later
-
-## 🚛 Products
-- **Virgin Aggregates**: Gabbro, Limestone
-- **Recycled Materials**: Gabbro, Sand Powder, Concrete Powder  
-- **Base Materials**: Road Base, Sub-Base, Backfill
-All materials available in 5mm, 10mm, 20mm, 28mm with stock ready.
+Responsive B2B website for **AlZelal Aggregates**, a leading QCS 2014 compliant supplier of Gabbro, Limestone, and Recycled materials in Qatar.
 
 ## ✨ Features
-- **Auto-play Hero Slider** - Swiper.js with fade effect, 5 slides
-- **Spec Cards** - Badges, sizes, CBR, and direct CTAs: "Get Quote"
-- **Product Grid** - 8 materials, hover zoom, centered layout
-- **Brand Styling** - Navy + Sand color palette, glassmorphism cards
-- **Fully Responsive** - Works on desktop, tablet, and mobile for site use
+- Premium Hero Slider with Swiper.js + glassmorphism cards
+- 8 Product cards with hover zoom and scale effects  
+- About, Vision, Mission, and Values section with icons
+- Brand palette: Navy `#1E3A8A` + Sand `#C2B280`
+- Mobile responsive + SEO optimized for "aggregates qatar"
+- Custom vertical accent lines and glow effects
 
-## 🛠 Tech Stack
-**Frontend**: HTML5, CSS3, Vanilla JavaScript  
-**Libraries**: Swiper.js v11 for slider  
-**Design**: CSS Variables, Flexbox, CSS Grid
+## 🛠️ Tech Stack
+HTML5, CSS3, Swiper.js, Font Awesome 6
 
-### Slider Config
-```js
-loop: true,
-autoplay: 4000ms,
-effect: 'fade',
-navigation + pagination enabled
+## 🎨 Color System
+```css
+--navy: #1E3A8A;
+--sand: #C2B280; 
+--light: #f8f7f2;
