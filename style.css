@@ -426,15 +426,20 @@ header{
     }
     .nav-list{
         display: flex;
-        margin: 15px;
-        gap: 1px;
+        margin: 15px 10px;
         flex-wrap: nowrap;
     }
     .nav-list li a{
         white-space: nowrap;
-        padding: 10px 5px;
-        font-size: 14px;
+        padding: 10px 4px;
+        margin-right: 5px;
+        font-size: 13px;
     }
+    .hero-slider .swiper{
+        width: 97%;
+        margin-left: 7px;
+        margin-bottom: 20px;
+  }
     .card-style { 
         margin: 0 15%; 
         padding: 30px 25px;
@@ -446,9 +451,57 @@ header{
     .specs-list li { 
       font-size: 14px; 
     }
+    .home{
+    width: 96%;
+    margin-left: 10px;
+  }
+    .home h1{
+      font-size: 2.5em;
+    }
+    .home p{
+      font-size: 1.2em;
+    }
+    .material-card:hover{
+      margin: 20px 25px;
+    }
+    .about{
+      width: 96%;
+      margin-left: 10px;
+    }
+    .about-parag{
+      width: fit-content;
+    }
+    .vision-mission-grid{
+      width: 100%;
+    }
+    .about-card{
+      margin-bottom: 25px;
+      height: fit-content;
+    }
+    .about-card:hover{
+      margin: 25px;
+    }
+    .values-grid{
+      width: 100%;
+    }
+    .value-title{
+      font-size: 1.6em;
+    }
+    .value-parag{
+      font-size: 1.3em;
+    }
+    .value-card{
+      height: fit-content;
+    }
+    .value-card-info{
+      padding: 10px;
+    }
+    .value-card-info p{
+      font-size: 1.2em;
+    }
    
 }
-@media(max-width: 411px){
+@media(max-width: 480px){
   header{
     flex-direction: column;
     height: auto;
@@ -459,17 +512,21 @@ header{
     font-size: 1em;
   }
   .hero-slider .swiper{
-    width: 94%;
+    width: 97%;
     margin-left: 5px;
   }
-  .home{
-    width: 95%;
+  .swiper-button-next, .swiper-button-prev{
+    display: none;
   }
+  
   .badge{
     font-size: 0.8em;
   }
   .card-style{
-    height: 420px;
+    margin: 0 3%;
+    padding: 20px 15px;
+    max-width: 90%;
+    min-height: auto;
   }
   .card-style ul li{
     margin-bottom: -2px;
@@ -489,69 +546,89 @@ header{
     padding: 10px;
     margin: 5px -5px;
   }
+  .home{
+    width: 95%;
+  }
+  .home h1{
+    margin-left: -10px;
+  }
+  .home p{
+    padding-right: 11px;
+    margin-left: -10px;
+  }
   .about{
-    width: 285px;
+    max-width: 93% ;
+    padding: 25px 20px;
   }
   .about h1{
-    font-size: 2em;
-    margin-bottom: -10px;
-    margin-top: -20px;
+    font-size: 1.8em;
+    padding: 0 5px;
+    margin-bottom: 30px;
+    margin-top: 10px;
   }
    .about-parag{
-    width: 230px;
-    margin-left: -20px;
+    max-width: 100%;
+    
   }
   .about-parag p{
     font-size: 1em;
   }
   .vision-mission-grid{
-    width: 230px;
-    margin-left: -20px;
-    padding: 15px;
+    max-width: 100%;
+    padding: 0 20px;
+
 }
   .about-card{
+    height: fit-content;
     padding: 15px;
-    margin: 25px 10px;
-    transition: all 0.7s ease;
-    
-    
+    margin: 25px 2px;
+    transition: all 0.7s ease;   
   }
   .about-card:hover{
     padding: 15px;
-    margin: 25px 10px;
+    margin: 30px 10px;
+    transform: scale(1.1);
   }
-  .our-mission {
-    height: 470px;
+  .about-card p {
+    font-size: 1em;
+    padding: 10px 12px;
   }
-  .our-vision{
-    height: 150px;
-  }
-  .about-card p{
-    font-size: 0.9em;
-  }
-  
+ 
   .values-grid{
-    width: 230px;
-    margin-left: -20px;
-    padding: 15px;
+    max-width: 100%;
+    padding: 25px 20px;
   }
   .value-parag{
     font-size: 1em;
   }
   .value-card{
-    min-height: 130px;
+    height: fit-content;
+    padding: 15px 10px;
     margin: 10px 5px;
   }
   .value-card a{
-    font-size: 1.5em;
+    font-size: 2em;
+    padding-left: 5px;
   }
   .value-card-info{
     padding-right: 5px;
   }
   .value-card-info h3{
-    font-size: 1em;
+    font-size: 1.1em;
+  }
+  .value-card-info .respect-title{
+    font-size: 1.05em;
   }
   .value-card-info p{
     font-size: 0.7em;
+  }
+}
+@media(max-width: 320px) {
+  .badge{
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+  .overlay{
+    background: linear-gradient(90deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%);
   }
 }
