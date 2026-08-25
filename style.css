@@ -1,4 +1,4 @@
-/* AL ZELAL AGGREGATES - PREMIUM HERO SLIDER */
+
 :root {
   --navy: #1E3A8A;
   --sand: #C2B280;
@@ -10,6 +10,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inter', 'Segoe UI', serif;
+}
+html,body{
+  overflow-x: hidden;
+  max-width: 100%;
 }
 /* HEADER */
 header{
@@ -272,7 +276,7 @@ header{
   width: 98%;
   border-radius: 12px;
   padding: 50px;
-  margin: 25px 15px;
+  margin: 25px 15px 15px 15px;
   box-shadow: 5px 2px 15px var(--navy);
 }
 .about h1{
@@ -411,12 +415,163 @@ header{
   letter-spacing: 1px;
   line-height: 1.5em;
 }
-
-
-
+/* FOOTER SECTION */
+.site-footer{
+  background: linear-gradient(180deg, #0f2357 0%, var(--navy) 100%);
+  border-radius: 12px 12px 8px 8px;
+  padding: 40px 20px 20px 20px; 
+  color: white; 
+}
+.footer-container{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0;
+}
+.footer-container h3{
+  font-size: 1.3em;
+  color: var(--sand);
+  margin-bottom: 15px;
+  margin-left: 0;
+  position: relative;
+  padding-bottom: 8px;
+}
+.footer-container h3::after{
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 50px;
+  background: var(--sand);
+}
+.location-map{
+  margin: 15px 0;
+  border-radius: 10px;
+  width: 100% !important;
+  height: 200px;
+  border: 3px solid var(--sand);
+}
+.footer-location .address{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 0;
+  gap: 10px;
+}
+.footer-location .address .fa-location-dot{
+  font-size: 1.2em;
+  color: var(--sand);
+  margin-top: 4px;
+}
+.footer-quick-links ul, .footer-products ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.footer-quick-links ul li, .footer-products ul li{
+  padding: 8px 0;
+  font-size: 1em;
+}
+.footer-quick-links ul li a, .footer-products ul li a{
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+.footer-quick-links ul li a:hover, .footer-products ul li a:hover{
+  color: var(--sand);  
+  padding-left: 5px;
+}
+.footer-contact div{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+}
+.footer-contact i{
+  color: var(--sand);
+}
+.footer-bottom{
+  border-top: 1px solid rgba(255,255,255,0.2);
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+}
+.footer-bottom p{
+  margin: 0;
+  font-size: 0.9em;
+}
 
 
 /* Mobile Responsive */
+
+@media(max-width: 1200px){
+  .hero-slider .swiper{
+        width: 97%;
+        margin-left: 10px;
+        margin-bottom: 20px;
+  }
+  .card-style { 
+        margin: 0 15%; 
+        padding: 30px 25px;
+  }
+  .home{
+      width: 96%;
+  }
+  .about-card{
+      width: 100%;
+      margin: 10px;
+  }
+  .about-card:hover{
+      margin: 25px 20px;
+  }
+  .footer-container{
+      gap: 15px;
+  }
+  
+}
+
+@media (max-width: 992px){
+  .nav-list{
+    gap: 1px;
+  }
+  .nav-list li a{
+    font-size: 1.2em;
+    white-space: nowrap;
+    margin-left: 10px;
+  }
+  header{
+    border-radius: 0 0 40px 40px;
+  }
+  .hero-slider .swiper{
+        width: 97%;
+        margin-left: 10px;
+        margin-bottom: 20px;
+  }
+  .card-style { 
+        margin: 0 15%; 
+        padding: 30px 25px;
+        max-width: 70%;
+    }
+    .home{
+      width: 96%;
+    }
+    .about-card{
+      width: 100%;
+      margin: 10px;
+    }
+    .about-card:hover{
+      margin: 25px 15px;
+    }
+    .footer-container{
+      gap: 15px;
+    }
+    .col1,.col2,.col3,.col4{
+      width: 24%;
+    }
+}
 @media (max-width: 768px) {
     body{
         overflow-x: hidden;
@@ -499,9 +654,37 @@ header{
     .value-card-info p{
       font-size: 1.2em;
     }
-   
+    .footer-container{
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      padding: 0 10px;
+    }
+    .location-map{
+      height: 180px;
+    }  
 }
-@media(max-width: 480px){
+@media(max-width: 540px){
+  .site-footer{
+    padding: 25px 15px;
+  }
+  .footer-container{
+    grid-template-columns: 2fr;
+    gap: 25px;
+    text-align: left;
+  }
+  .footer-container h3{
+    font-size: 1.1em;
+  }
+  .location-map{
+    height: 200px !important;
+  }
+  .footer-quick-links ul li, .footer-quick-links ul li{
+    font-size: 0.95em;
+  }
+}
+
+@media(max-width: 460px){
+ 
   header{
     flex-direction: column;
     height: auto;
@@ -557,7 +740,7 @@ header{
     margin-left: -10px;
   }
   .about{
-    max-width: 93% ;
+    max-width: 95% ;
     padding: 25px 20px;
   }
   .about h1{
@@ -622,6 +805,27 @@ header{
   .value-card-info p{
     font-size: 0.7em;
   }
+  
+  .footer-container{
+    gap: 20px;
+    padding: 0 5px;
+  }
+  .footer-container h3{
+    font-size: 1em;
+  }
+  .footer-container p, .footer-container a{
+    font-size: 0.85em;
+    word-break: break-word;
+    line-height: 1.6;
+  }
+  .location-map{
+    height: 150px !important;
+    border: 2px solid var(--sand);
+  }
+  .footer-bottom p{
+    font-size: 0.8em;
+  }
+
 }
 @media(max-width: 320px) {
   .badge{
