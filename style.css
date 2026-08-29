@@ -342,7 +342,7 @@ header{
 }
 .about-card:hover{
   transform: scale(1.1);
-  margin-right: 20px;
+  margin: 0 20px;
   margin-left: 20px;
 }
 .about-card h3{
@@ -419,13 +419,13 @@ header{
 .site-footer{
   background: linear-gradient(180deg, #0f2357 0%, var(--navy) 100%);
   border-radius: 12px 12px 8px 8px;
-  padding: 40px 20px 20px 20px; 
+  padding: 40px 20px 20px 40px; 
   color: white; 
 }
 .footer-container{
   display: grid;
   grid-template-columns: repeat(4,1fr);
-  gap: 30px;
+  gap: 40px;
   max-width: 1400px;
   margin: 0 auto;
   padding: 0;
@@ -530,6 +530,7 @@ header{
   .footer-container{
       gap: 15px;
   }
+ 
   
 }
 
@@ -568,9 +569,7 @@ header{
     .footer-container{
       gap: 15px;
     }
-    .col1,.col2,.col3,.col4{
-      width: 24%;
-    }
+    
 }
 @media (max-width: 768px) {
     body{
@@ -654,35 +653,52 @@ header{
     .value-card-info p{
       font-size: 1.2em;
     }
-    .footer-container{
-      grid-template-columns: 1fr 1fr;
-      gap: 25px;
-      padding: 0 10px;
+    .site-footer{
+      padding: 25px 20px;
     }
-    .location-map{
-      height: 180px;
-    }  
-}
-@media(max-width: 540px){
-  .site-footer{
-    padding: 25px 15px;
-  }
-  .footer-container{
-    grid-template-columns: 2fr;
-    gap: 25px;
-    text-align: left;
-  }
-  .footer-container h3{
-    font-size: 1.1em;
-  }
-  .location-map{
-    height: 200px !important;
-  }
-  .footer-quick-links ul li, .footer-quick-links ul li{
-    font-size: 0.95em;
-  }
+    .footer-container{
+      display: flex;      
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      gap: 20px;
+      padding: 15px 20px;
+    
+    }
+    .footer-container h3{
+      font-size: 0.9em;
+    }
+    
+    .address p{
+      font-size: 0.8em;
+      word-break: break-word;
+    }
+    
+    .footer-container ul li a{
+      font-size: 0.8em;
+      word-break: break-word;
+    }
+    .footer-contact p{
+      font-size: 0.8em;
+      word-break: break-word;
+    }
+    
+   
 }
 
+@media(max-width: 540px) {
+  .footer-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .location-map{
+    width: 90%;
+  }
+  .footer-bottom p{
+    font-size: 0.8em;
+  }
+}
 @media(max-width: 460px){
  
   header{
@@ -807,23 +823,15 @@ header{
   }
   
   .footer-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 20px;
     padding: 0 5px;
   }
-  .footer-container h3{
-    font-size: 1em;
-  }
-  .footer-container p, .footer-container a{
-    font-size: 0.85em;
-    word-break: break-word;
-    line-height: 1.6;
-  }
-  .location-map{
-    height: 150px !important;
-    border: 2px solid var(--sand);
-  }
+  
   .footer-bottom p{
-    font-size: 0.8em;
+    font-size: 0.6em;
   }
 
 }
