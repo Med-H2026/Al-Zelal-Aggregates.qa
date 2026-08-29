@@ -493,6 +493,11 @@ header{
 .footer-contact i{
   color: var(--sand);
 }
+.footer-contact a{
+  text-decoration: none;
+  color: white;
+  font-size: 0.9em;
+}
 .footer-bottom{
   border-top: 1px solid rgba(255,255,255,0.2);
   text-align: center;
@@ -660,7 +665,7 @@ header{
       display: flex;      
       justify-content: space-between;
       flex-wrap: nowrap;
-      gap: 20px;
+      gap: 15px;
       padding: 15px 20px;
     
     }
@@ -678,6 +683,10 @@ header{
       word-break: break-word;
     }
     .footer-contact p{
+      font-size: 0.8em;
+      word-break: break-word;
+    }
+    .footer-contact a{
       font-size: 0.8em;
       word-break: break-word;
     }
@@ -828,6 +837,10 @@ header{
     flex-wrap: wrap;
     gap: 20px;
     padding: 0 5px;
+  }
+  .footer-contact a{
+    font-size: 0.8em;
+    margin-left:-3px;
   }
   
   .footer-bottom p{
