@@ -17,7 +17,7 @@ html,body{
 }
 /* HEADER */
 header{
-    background: linear-gradient(280deg,#9bb0eb,#1E3A8A);
+    background: linear-gradient(180deg, #0f2357 0%, var(--navy) 100%);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -61,9 +61,7 @@ header{
 .nav-list li a:hover{
     background: var(--sand);
     border-radius: 12px;
-    box-shadow: 0 0 25px var(--sand),
-                0 0 50px var(--sand),
-                0 0 75px var(--sand);
+    box-shadow: 0 0 25px var(--sand);
 }
 
 /* SLIDER HERO SECTION */
