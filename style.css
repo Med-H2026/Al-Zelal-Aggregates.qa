@@ -190,6 +190,43 @@ header{
   color: #555;
   font-weight: 600;
 }
+/* PRODUCT FILTER TABS */
+.product-tabs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 30px 0 40px 0;
+    padding: 0 20px;
+}
+
+.tab-btn{
+    background: white;
+    color: var(--navy);
+    border: 2px solid var(--navy);
+    padding: 12px 24px;
+    border-radius: 50px; /* pill shape like your screenshot */
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.tab-btn:hover{
+    background: var(--sand);
+    color: var(--navy);
+    border-color: var(--sand);
+}
+
+.tab-btn.active{
+    background: var(--sand); /* brown like your image */
+    color: var(--navy);
+    border-color: var(--sand);
+    box-shadow: 0 4px 15px rgba(194, 178, 128, 0.4);
+}
+
 .material-grid{
   display: grid;
   justify-content: center;
@@ -211,7 +248,7 @@ header{
   transition: all 0.7s ease;
 }
 .material-card:hover{
-  transform: scale(1.1);
+  transform: scale(1);
   margin: 15px;
 
 }
@@ -228,7 +265,7 @@ header{
   transition: transform 0.4s ease;
 }
 .material-card:hover img{
-  transform: scale(1.3);
+  transform: scale(1.1);
 }
 
 .card-info{
@@ -413,6 +450,125 @@ header{
   letter-spacing: 1px;
   line-height: 1.5em;
 }
+
+/*CONTACT SECTION*/
+.contact{
+  width: 98%;
+  margin: 25px 15px 15px 15px;
+}
+.contact-map{
+  width: 100%;
+  height: 450px;
+  margin: 0 0 15px 0;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 5px 2px 15px var(--navy);
+}
+
+.ho-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  padding: 50px;
+  background: var(--light);
+  border-radius: 12px;
+  box-shadow: 5px 2px 15px var(--navy);
+}
+
+/* LEFT */
+.ho-contact h2{
+  color: var(--navy);
+  font-size: 1.8em;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+.ho-contact-item{
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+.ho-contact-item .fa-location-dot,
+.ho-contact-item .fa-phone,
+.ho-contact-item .fa-envelope,
+.ho-contact-item .fa-clock{
+  font-size: 20px;
+  color: var(--sand);
+  margin-top: 3px;
+  min-width: 20px;
+}
+.ho-contact-item p, .ho-contact-item a{
+  color: #555;
+  font-size: 1em;
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+/* RIGHT */
+.ho-form h1{
+  color: var(--navy);
+  margin-bottom: 30px;
+  font-size: 1.8em;
+  font-weight: 700;
+}
+.contact-form-row{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.input-group{
+ position: relative;
+ margin-bottom: 20px;
+}
+
+.input-group input, 
+.input-group textarea{
+  width: 100%;
+  padding: 14px 45px 14px 15px; /* 45px for icon space */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95em;
+  background: #fff;
+  font-family: inherit;
+}
+.input-group input:focus,
+.input-group textarea:focus{
+  border: 2px solid var(--sand);
+  outline: none;
+}
+
+.input-group .fa-user,
+.input-group .fa-envelope,
+.input-group .fa-phone,
+.input-group .fa-building,
+.input-group .fa-comment{ 
+  position: absolute;
+  right: 15px;
+  top: 22px;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+
+.contact-form .btn-primary{
+  background-color: var(--navy);
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1em;
+  margin-top: 10px;
+}
+.contact-form .btn-primary:hover{
+  background: var(--sand);
+  color: var(--navy);
+}
+
+
 /* FOOTER SECTION */
 .site-footer{
   background: linear-gradient(180deg, #0f2357 0%, var(--navy) 100%);
@@ -507,7 +663,44 @@ header{
   font-size: 0.9em;
 }
 
+/* BACK TO TOP BUTTON */
+.back-to-top{
+    position: fixed; /* stays in place when scrolling */
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--sand);
+    color: var(--navy);
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 999;
 
+    /* hide it by default */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.back-to-top.show{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover{
+    background: var(--navy);
+    color: var(--sand);
+    transform: scale(1.1);
+}
+
+    
 /* Mobile Responsive */
 
 @media(max-width: 1200px){
@@ -572,7 +765,24 @@ header{
     .footer-container{
       gap: 15px;
     }
-    
+    .ho-container{
+      grid-template-columns: 1fr;
+      padding: 30px 20px;
+      gap: 40px;
+    }
+    .contact-form > div{
+      grid-template-columns: 1fr;
+    }
+     .contact{
+    width: 96%;
+  }
+  .contact-map{
+    width: 100%;
+  
+  }
+  .contact-btn{
+    margin: 0 300px;
+  }
 }
 @media (max-width: 768px) {
     body{
@@ -618,6 +828,21 @@ header{
     .home p{
       font-size: 1.2em;
     }
+    .product-tabs{
+      justify-content: flex-start;
+      overflow-x: auto;
+      padding-bottom: 10px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .product-tabs::-webkit-scrollbar{ 
+      display: none; /*hide scroll bar*/
+     } 
+    .tab-btn{ 
+      padding: 10px 18px; 
+      font-size: 0.9em; 
+    }
+
+
     .material-card:hover{
       margin: 20px 25px;
     }
@@ -688,8 +913,12 @@ header{
       font-size: 0.8em;
       word-break: break-word;
     }
-    
-   
+    .input-group{
+      width: 97%;
+    }
+    .contact-btn{
+      margin: 0 230px;
+    }
 }
 
 @media(max-width: 540px) {
@@ -704,6 +933,23 @@ header{
   }
   .footer-bottom p{
     font-size: 0.8em;
+  }
+  .back-to-top{
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+  .contact{
+    width: 95%;
+  }
+  .contact-map{
+    width: 100%;
+    height: 250px;
+  }
+  .contact-btn{
+    margin: 0 120px;
   }
 }
 @media(max-width: 460px){
@@ -844,7 +1090,30 @@ header{
   .footer-bottom p{
     font-size: 0.6em;
   }
+  .contact{
+    width: 93%;
+  }
+  .contact-map{
+    width: 100%;
+    height: 250px;
+  }
+  .contact-btn{
+    margin: 0 95px;
+  }
+  
 
+}
+@media(max-width: 344px){
+  .input-group{
+    width: 95%;
+  }
+  .ho-form h1{
+    font-size: 1.6em;
+    font-weight: 700;
+  }
+  .contact-btn{
+    margin: 0 65px;
+  }
 }
 @media(max-width: 320px) {
   .badge{

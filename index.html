@@ -18,17 +18,17 @@
         </div>
         <nav  class="nav-links" >
             <ul class="nav-list">
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">PRODUCTS</a></li>
+                <li><a href="#hero">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#home">PRODUCTS</a></li>
                 <li><a href="#">PROJECTS</a></li>
-                <li><a href="#">CONTACT US</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- HERO SLIDER -->
-    <section class="hero-slider">
+    <section class="hero-slider" id="hero">
         <div class="swiper">
             <div class="swiper-wrapper">
 
@@ -115,94 +115,97 @@
             <div class="swiper-pagination"></div>
         </div>
     </section>
-
     <!--HOME-->
     <section class="home" id="home">
         <h1>Our Products</h1>
         <p>We supply the best raw materials in Qatar</p>
+
+        <!-- NEW FILTER TABS -->
+        <div class="product-tabs">
+            <button class="tab-btn active" data-filter="all">All Products</button>
+            <button class="tab-btn" data-filter="gabbro">Gabbro</button>
+            <button class="tab-btn" data-filter="limestone">Limestone</button>
+            <button class="tab-btn" data-filter="roadbase">Road Base & Sub-Base</button>
+            <button class="tab-btn" data-filter="backfill">Backfill</button>
+            <button class="tab-btn" data-filter="recycled">Recycled Gabbro</button>
+            <button class="tab-btn" data-filter="powder">Concrete Powder</button>
+            <button class="tab-btn" data-filter="sand">Sand Powder</button>
+        </div>
+
         <div class="material-grid">
             <!-- product 1 -->
-            <div class="material-card">
-                <div class="img-wrap">
-                    <img src="images/material-card/gabbro-card.jpeg" alt="Gabbro">
-                </div>
+            <div class="material-card" data-category="gabbro">
+                <div class="img-wrap"><img src="images/material-card/gabbro-card.jpeg" alt="Gabbro"></div>
                 <div class="card-info">
                     <h3>Gabbro</h3>
                     <p>High-strength crushed gabbro for asphalt, concrete, and base layers. CBR >80%. Available in 5mm, 10mm, 20mm, 28mm. QCS 2014 compliant.</p>
                 </div>
                 <a href="#" class="btn-primary">Read More</a>
             </div>
+
             <!-- product 2 -->
-            <div class="material-card">
-                <div class="img-wrap">
-                    <img src="images/material-card/limestone-card.jpeg" alt="limestone">
-                </div>
+            <div class="material-card" data-category="limestone">
+                <div class="img-wrap"><img src="images/material-card/limestone-card.jpeg" alt="limestone"></div>
                 <div class="card-info">
                     <h3>Limestone</h3>
                     <p>Premium limestone aggregates for road construction and concrete production. Clean, cubical shape. Sizes: 10mm, 20mm, 28mm. Stock available now.</p>
                 </div>
                 <a href="#" class="btn-primary">Read More</a>
             </div>
+
             <!-- product 3 -->
-            <div class="material-card">
-                <div class="img-wrap">
-                    <img src="images/material-card/recycled-gab-card.jpeg" alt="Recycled Gabbro">
-                </div>
+            <div class="material-card" data-category="recycled">
+                <div class="img-wrap"><img src="images/material-card/recycled-gab-card.jpeg" alt="Recycled Gabbro"></div>
                 <div class="card-info">
                     <h3>Recycled Gabbro</h3>
-                    <p>Sustainable recycled gabbro from C&D waste. Ideal for road base, sub-base, and fill. Cost-effective and eco-certified for green projects. </p>
+                    <p>Sustainable recycled gabbro from C&D waste. Ideal for road base, sub-base, and fill. Cost-effective and eco-certified for green projects.</p>
                 </div>
                 <a href="#" class="btn-primary">Read More</a>
             </div>
+
             <!-- product 4 -->
-            <div class="material-card">
-                <div class="img-wrap">
-                    <img src="images/material-card/concrete-powder-card.jpeg" alt="concrete powder">
-                </div>
+            <div class="material-card" data-category="powder">
+                <div class="img-wrap"><img src="images/material-card/concrete-powder-card.jpeg" alt="concrete powder"></div>
                 <div class="card-info">
                     <h3>Recycled Concrete powder</h3>
                     <p>Finely ground concrete powder for decorative concrete, pavers, and precast. High strength with uniform color. Black cement alternative.</p>
                 </div>
                 <a href="#" class="btn-primary">Read More</a>
             </div>
+
             <!-- product 5 -->
-            <div class="material-card">
-                <div class="img-wrap">
-                    <img src="images/material-card/recycled-sand-powder-card.jpeg" alt="Recycled Sand Powder">
-                </div>
+            <div class="material-card" data-category="sand">
+                <div class="img-wrap"><img src="images/material-card/recycled-sand-powder-card.jpeg" alt="Recycled Sand Powder"></div>
                 <div class="card-info">
                     <h3>Recycled Sand Powder</h3>
                     <p>Manufactured sand produced from recycled construction waste. Perfect for blocks, mortar, and plaster. Reduces cost and environmental impact.</p>
                 </div>
                 <a href="#" class="btn-primary">Read More</a>
             </div>
+
             <!-- product 6 -->
-            <div class="material-card">
-                <div class="img-wrap">
-                    <img src="images/material-card/backfill-card.jpeg" alt="backfill">
-                </div>
+            <div class="material-card" data-category="backfill">
+                <div class="img-wrap"><img src="images/material-card/backfill-card.jpeg" alt="backfill"></div>
                 <div class="card-info">
                     <h3>Backfill</h3>
                     <p>Selected granular backfill material for utilities, foundations, and landscaping. Well-graded and compaction-ready for all site works.</p>
                 </div>
                 <a href="#" class="btn-primary">Read More</a>
             </div>
+
             <!-- product 7 -->
-            <div class="material-card">
-                <div class="img-wrap">
-                    <img src="images/material-card/road-base-card.jpeg" alt="Road Base">
-                </div>
+            <div class="material-card" data-category="roadbase">
+                <div class="img-wrap"><img src="images/material-card/road-base-card.jpeg" alt="Road Base"></div>
                 <div class="card-info">
                     <h3>Road Base</h3>
                     <p>Engineered road base aggregate for highways and pavements. Superior load-bearing and drainage properties. Meets Qatar MOT standards.</p>
                 </div>
                 <a href="#" class="btn-primary">Read More</a>
             </div>
+
             <!-- product 8 -->
-            <div class="material-card">
-                <div class="img-wrap">
-                    <img src="images/material-card/sub-base-card.jpeg" alt="Sub-Base">
-                </div>
+            <div class="material-card" data-category="roadbase">
+                <div class="img-wrap"><img src="images/material-card/sub-base-card.jpeg" alt="Sub-Base"></div>
                 <div class="card-info">
                     <h3>Sub-Base</h3>
                     <p>High-quality sub-base material for structural support under roads and slabs. Stable, durable, and ready for immediate delivery.</p>
@@ -211,6 +214,7 @@
             </div>
         </div>
     </section>
+
     <!--ABOUT SECTION-->
     <section class="about" id="about">
         <h1>About <span class="about-title">AL ZELAL AL QATARIA</span></h1>
@@ -269,12 +273,7 @@
             </div>
         </div>
     </section>
-    
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         
-    <!-- JS -->
-    <script src="script.js"></script>
     <!--FOOTER-->
     <footer class="site-footer">
         <div class="footer-container">
@@ -344,5 +343,14 @@
             <p>© 2026 AlZelal Aggregates. All Rights Reserved. | QCS 2014 Certified Supplier</p>
         </div>
     </footer>
+    <!--back to top button-->
+    <a href="#" class="back-to-top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </a>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        
+    <!-- JS -->
+    <script src="script.js"></script>
 </body>
 </html>
