@@ -15,13 +15,13 @@ html,body{
   overflow-x: hidden;
   max-width: 100%;
 }
+
 /* HEADER */
 header{
     background: linear-gradient(180deg, #0f2357 0%, var(--navy) 100%);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 0 0 25px 25px;
     padding: 12px 5%;
     height: 130px;
 
@@ -62,6 +62,35 @@ header{
     background: var(--sand);
     border-radius: 12px;
     box-shadow: 0 0 25px var(--sand);
+}
+
+/*BANNER*/
+.banner{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 50px;
+  font-size: 1.2em;
+  font-weight: 600;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 30px;
+  background: var(--sand);
+  color: white;
+  border-radius: 0 0 25px 25px;
+}
+.banner-tel .fa-phone{
+  margin-right: 5px;
+  
+}
+.banner-tel a{
+  text-decoration: none;
+  color: white;
+}
+.banner-mail{
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 /* SLIDER HERO SECTION */
@@ -700,7 +729,67 @@ header{
     transform: scale(1.1);
 }
 
-    
+/* WHY US SECTION */
+.why-us{ padding: 80px 5%; background: var(--light); text-align: center;}
+.why-us h2{ color: var(--navy); font-size: 2.2em; margin-bottom: 10px;}
+.why-sub{ color: #666; margin-bottom: 50px; font-weight: 600;}
+.why-grid{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-bottom: 60px;}
+.why-card{ background: #fff; padding: 35px 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: 0.4s; border-top: 4px solid transparent;}
+.why-card:hover{ transform: translateY(-10px); border-top: 4px solid var(--sand); box-shadow: 0 10px 25px rgba(30,58,138,0.2);}
+.why-card i{ font-size: 40px; color: var(--sand); margin-bottom: 15px;}
+.why-card h3{ color: var(--navy); margin-bottom: 10px; font-size: 1.3em;}
+
+/* STATS */
+.stats-grid{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; padding-top: 40px; border-top: 2px solid #ddd;}
+.stat-item h3{ font-size: 3em; color: var(--navy); font-weight: 800;}
+.stat-item p{ color: #666; text-transform: uppercase; font-size: 0.9em; font-weight: 600;}
+
+/* PROJECTS */
+.projects{ padding: 80px 5%; background: #fff; text-align: center;}
+.projects h2{ color: var(--navy); font-size: 2.2em; margin-bottom: 10px;}
+.projects p{ color: #666; margin-bottom: 40px; font-weight: 600;}
+.projects-swiper{ padding-bottom: 50px;}
+.projects-swiper .swiper-slide{height: 450px;border-radius: 12px;overflow: hidden;}
+.projects-swiper .swiper-slide img{ width: 100%; height: 100%; object-fit: cover; border-radius: 12px; filter: grayscale(80%); transition: 0.4s; box-shadow: 0 4px 12px rgba(0,0,0,0.2);}
+.projects-swiper .swiper-slide img:hover{ filter: grayscale(0%); transform: scale(1.05);}
+
+/* CTA */
+.cta-banner{
+   background: linear-gradient(90deg, rgba(101, 113, 145, 0.95) 0%, rgba(1, 10, 32, 0.95) 100%), url('images/cta-bg.jpg') center/cover;
+   padding: 90px 5%;
+   text-align: center; 
+   color: #fff; 
+   border-radius: 12px; 
+   margin: 30px 05px;
+}
+.cta-banner h2{ 
+  font-size: 2.5em; 
+  margin-bottom: 15px;
+}
+.cta-banner p{ 
+  font-size: 1.2em; 
+  margin-bottom: 0;
+}
+.cta-buttons{ 
+  display: flex; gap: 20px; 
+  justify-content: center; 
+  margin-top: 30px;
+}
+.btn-secondary{ 
+  background: var(--sand); 
+  color: var(--navy); 
+  padding: 15px 32px; 
+  border-radius: 8px; 
+  text-decoration: none; 
+  font-weight: 700; 
+  transition: 0.3s;
+}
+.btn-secondary:hover{ 
+  background: #fff; 
+  transform: translateY(-2px);
+}
+
+
 /* Mobile Responsive */
 
 @media(max-width: 1200px){
@@ -739,9 +828,7 @@ header{
     white-space: nowrap;
     margin-left: 10px;
   }
-  header{
-    border-radius: 0 0 40px 40px;
-  }
+  
   .hero-slider .swiper{
         width: 97%;
         margin-left: 10px;
@@ -783,6 +870,10 @@ header{
   .contact-btn{
     margin: 0 300px;
   }
+  
+  .why-grid, .stats-grid{ grid-template-columns: repeat(2, 1fr);}
+  .cta-buttons{ flex-direction: column; align-items: center;}
+
 }
 @media (max-width: 768px) {
     body{
@@ -919,9 +1010,21 @@ header{
     .contact-btn{
       margin: 0 230px;
     }
+    .projects-swiper .swiper-slide{
+      height: 300px;
+    }
+}
+@media(max-width: 600px){
+  .why-grid, .stats-grid{ grid-template-columns: 1fr;}
+  .cta-banner h2{ font-size: 1.8em;}
 }
 
 @media(max-width: 540px) {
+  .banner{
+    font-size: 0.8em;
+    font-weight: 600;
+    
+  }
   .footer-container{
     display: flex;
     justify-content: space-between;
@@ -953,15 +1056,22 @@ header{
   }
 }
 @media(max-width: 460px){
- 
+  .banner{
+    font-size: 0.8em;
+    font-weight: 400;
+  }
   header{
     flex-direction: column;
     height: auto;
   }
   .nav-list{
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     font-size: 1em;
+  }
+  .nav-list li a{
+    font-size: 0.8em;
+    margin-left: 1px;
   }
   .hero-slider .swiper{
     width: 97%;
@@ -1100,10 +1210,17 @@ header{
   .contact-btn{
     margin: 0 95px;
   }
-  
+  .projects-swiper .swiper-slide{
+    height: 180px;
+  }
 
 }
 @media(max-width: 344px){
+  .banner{
+    font-size: 0.8em;
+    font-weight: 300;
+    
+  }
   .input-group{
     width: 95%;
   }

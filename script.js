@@ -1,3 +1,17 @@
+//swiper projects
+const projectsSwiper = new Swiper(".projects-swiper", {
+  slidesPerView: 4,
+  spaceBetween: 20,
+  loop: true,
+  pagination: { el: ".swiper-pagination", clickable: true },
+  breakpoints: {
+    320: { slidesPerView: 1 },
+    768: { slidesPerView: 2 },
+    992: { slidesPerView: 4 },
+  },
+});
+
+//HERO SLIDER
 const swiper = new Swiper('.swiper', {
   loop: true,
   autoplay: { 
@@ -61,3 +75,4 @@ backToTopBtn.addEventListener('click', (e) => {
         behavior: 'smooth' // smooth animation
     });
 });
+
